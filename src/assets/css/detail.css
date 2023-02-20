@@ -1,0 +1,752 @@
+/*-----------------------------------*\
+ * #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+
+
+:root {
+
+    /**
+     * colors
+     */
+
+    --rich-black-fogra-29: hsl(225, 25%, 9%);
+    --rich-black-fogra-39: hsl(170, 21%, 5%);
+    --raisin-black: hsl(228, 13%, 15%);
+    --eerie-black: hsl(207, 19%, 11%);
+    --light-gray: hsl(0, 3%, 80%);
+    --gunmetal-1: hsl(229, 15%, 21%);
+    --gunmetal-2: hsl(216, 22%, 18%);
+    --gainsboro: hsl(0, 7%, 88%);
+    --citrine: hsl(57, 97%, 45%);
+    --xiketic: hsl(253, 21%, 13%);
+    --gray-x: hsl(0, 0%, 74%);
+    --white: hsl(0, 100%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --jet: hsl(0, 0%, 20%);
+
+    /**
+     * typography
+     */
+
+    --ff-poppins: 'Poppins', sans-serif;
+
+    --fs-1: 36px;
+    --fs-2: 32px;
+    --fs-3: 30px;
+    --fs-4: 24px;
+    --fs-5: 25px;
+    --fs-6: 18px;
+    --fs-7: 16px;
+    --fs-8: 15px;
+    --fs-9: 14px;
+    --fs-10: 13px;
+    --fs-11: 12px;
+    --fs-12: 11px;
+
+    --fw-500: 500;
+    --fw-700: 700;
+
+    /**
+     * transition
+     */
+
+    --transition-1: 0.15s ease;
+    --transition-2: 0.25s ease-in;
+
+    /**
+     * spacing
+     */
+
+    --section-padding: 100px;
+
+}
+
+
+
+
+/* .background-che {
+    height: 100%;
+    width: 96%;
+    background: hsl(204, 16%, 12%);
+    background-position: center;
+
+    position: absolute;
+    top: 87px;
+    opacity: 0.6;
+} */
+
+
+
+
+
+
+
+
+
+/*-----------------------------------*\
+   * #MOVIE DETAIL 
+  \*-----------------------------------*/
+
+
+.meta-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px 25px;
+    margin-bottom: 50px;
+}
+
+.movie-detail-content {
+    max-width: 629px;
+    text-align: initial;
+    padding-inline: 15px;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+.episode {
+    display: flex;
+    width: 308px;
+    height: 24px;
+    margin-top: 66px;
+    margin-bottom: 10px;
+    padding: 0 8px;
+    text-align: center;
+
+}
+
+.episode-number {
+    cursor: pointer;
+    border: 1px solid;
+    margin-left: 10px;
+    width: 28px;
+    text-align: center;
+}
+
+
+
+
+select,
+button {
+
+    font: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.badge-wrapper,
+.ganre-wrapper,
+.date-time {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px 10px;
+}
+
+.storyline {
+    color: var(--gray-x);
+    font-size: var(--fs-9);
+    font-weight: var(--fw-500);
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+
+.movie-detail {
+    background: url("../images/movie-detail-bg.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 160px;
+    padding-bottom: var();
+
+}
+
+.movie-detail-banner {
+    position: relative;
+    background: var(--gunmetal-1);
+    max-width: 300px;
+    margin-inline: auto;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.movie-detail-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-btn {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    font-size: 120px;
+    color: var(--white);
+    transition: var(--transition-1);
+}
+
+.play-btn:hover {
+    background: hsla(0, 0%, 0%, 0.25);
+}
+
+.detail-subtitle {
+    font-size: var(--fs-5);
+    color: var(--citrine);
+    font-weight: var(--fw-700);
+    margin-bottom: 10px;
+}
+
+.detail-title {
+    margin-bottom: 20px;
+}
+
+.detail-title strong {
+    color: var(--citrine);
+}
+
+.movie-detail .meta-wrapper {
+    margin-bottom: 30px;
+}
+
+.storyline {
+    color: var(--gray-x);
+    font-size: var(--fs-9);
+    font-weight: var(--fw-500);
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.details-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px 40px;
+    max-width: 460px;
+    background: var(--gunmetal-2);
+    padding: 25px;
+    border: 1px solid var(--jet);
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.details-actions .share ion-icon {
+    font-size: 25px;
+    color: var(--white);
+    margin-inline: auto;
+}
+
+.details-actions .share span {
+    color: var(--gainsboro);
+    font-size: var(--fs-11);
+    transition: var(--transition-1);
+}
+
+.details-actions .share:is(:hover, :focus) span {
+    color: var(--citrine);
+}
+
+.details-actions .title {
+    color: var(--white);
+    font-weight: var(--fw-700);
+}
+
+.details-actions .text {
+    font-size: var(--fs-11);
+    color: var(--gainsboro);
+}
+
+.details-actions .btn-primary {
+    font-size: 10px;
+    padding: 13px 26px;
+    letter-spacing: 0;
+    background: transparent;
+}
+
+.details-actions .btn-primary:is(:hover, :focus) {
+    background: var(--citrine);
+}
+
+
+.download-btn {
+    max-width: max-content;
+    background: var(--citrine);
+    color: var(--rich-black-fogra-29);
+    font-size: var(--fs-11);
+    font-weight: var(--fw-500);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 35px;
+    letter-spacing: 5px;
+    border-radius: 6px;
+}
+
+.download-btn ion-icon {
+    font-size: 16px;
+}
+
+.btn {
+    color: var(--white);
+    font-size: var(--fs-11);
+    font-weight: var(--fw-700);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 30px;
+    border: 2px solid var(--citrine);
+    border-radius: 50px;
+    transition: var(--transition-1);
+}
+
+.badge-outline {
+    border-color: var(--white);
+}
+
+.badge {
+    color: var(--white);
+    font-size: var(--fs-12);
+    font-weight: var(--fw-700);
+    border: 2px solid transparent;
+    padding: 2px 10px;
+}
+
+.badge-fill {
+    background: var(--white);
+    color: var(--raisin-black);
+}
+
+.badge-outline {
+    border-color: var(--white);
+}
+
+.ionicon-stroke-width {
+    stroke-width: var(--ionicon-stroke-width, 32px);
+}
+
+.ionicon-fill-none {
+    fill: none;
+}
+
+.hydrated {
+    visibility: inherit;
+}
+
+.date-time>div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--gainsboro);
+    font-size: var(--fs-9);
+    font-weight: var(--fw-500);
+}
+
+:host .ionicon {
+    stroke: currentcolor;
+}
+
+/* ----------------------------------------MOVE CONTAINER------------------------------------ */
+
+
+
+.list-server {
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    color: #fff601;
+    max-width: 1000px;
+    margin: 10px auto;
+    background: #333;
+    padding-bottom: 5px;
+}
+
+ul,
+span,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+.episodes {
+    margin: 20px -7px;
+    text-align: justify;
+    border-bottom: 1px solid #4c4c4c;
+    font-size: 0;
+    position: relative;
+
+}
+
+.episodes li a {
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 3px;
+    background: #3a3a3a;
+    padding: 7px;
+}
+
+.episodes li {
+    display: inline-block;
+    margin: 0 5px 15px;
+}
+
+.box-player {
+    position: relative;
+
+}
+
+.box-player {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+#player {
+    position: relative;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 190%;
+}
+
+.film-notes {
+    position: absolute;
+    height: 143px;
+    bottom: -34%;
+    font-size: 18px;
+}
+
+#player-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+}
+
+#page-player {
+    padding: 10px;
+    margin: 0 auto 0;
+    background: #222;
+    overflow: hidden;
+    max-width: 90%;
+}
+
+.move-container {
+    margin: 0 auto;
+    width: auto;
+    padding: 0 60px;
+    max-width: 1500px;
+}
+
+
+
+
+
+
+/* 
+-----------------------------------------------------------------------------------------
+=========================================================================================== */
+
+
+
+
+/*-----------------------------------*\
+   * #MEDIA QUERIES
+  \*-----------------------------------*/
+
+/**
+   * responsive for large than 550px screen
+   */
+
+@media (min-width: 550px) {
+
+    /**
+     * CUSTOM PROPERTY
+     */
+
+    :root {
+
+        /**
+       * typography
+       */
+
+        --fs-1: 42px;
+
+    }
+
+
+
+    /**
+     * REUSED STYLE
+     */
+
+    .container {
+
+        max-width: 100%;
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+    /**
+     * MOVIE DETAIL
+     */
+    .film-note {
+
+
+        display: none;
+    }
+
+    .detail-subtitle {
+        --fs-5: 22px;
+    }
+
+    .detail-title {
+        --fs-1: 46px;
+    }
+
+}
+
+
+
+
+
+/**
+   * responsive for large than 768px screen
+   */
+
+@media (min-width: 768px) {
+
+    #page-player {
+
+        max-width: 90%;
+    }
+
+    .film-note {
+
+
+        display: none;
+    }
+
+    /**
+     * CUSTOM PROPERTY
+     */
+
+    :root {
+
+        /**
+       * typography
+       */
+
+        --fs-2: 36px;
+
+    }
+
+
+
+    /**
+     * REUSED STYLE
+     */
+
+    .container {
+        max-width: 720px;
+        padding-inline: 15px;
+    }
+
+
+
+
+
+    /**
+     * HEADER
+     */
+
+
+
+
+
+
+
+
+    /**
+     * MOVIE DETAIL
+     */
+
+    .detail-subtitle {
+        --fs-5: 20px;
+    }
+
+    .detail-title {
+        --fs-1: 50px;
+    }
+
+}
+
+
+
+
+
+/**
+   * responsive for large than 992px screen
+   */
+
+@media (min-width: 992px) {
+
+    /**
+     * REUSED STYLE
+     */
+    .container {
+        max-width: 960px;
+        padding-inline: 15px;
+    }
+
+    .film-note {
+
+
+        display: none;
+    }
+
+    #page-player {
+
+        max-width: 90%;
+    }
+
+
+
+
+    /**
+     * MOVIE DETAIL
+     */
+
+    .movie-detail {
+        padding-bottom: 200px;
+    }
+
+    .movie-detail .container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .movie-detail-banner,
+    .details-actions {
+        margin: 0;
+    }
+
+    .download-btn {
+        position: absolute;
+        left: 15px;
+        bottom: -80px;
+    }
+
+}
+
+
+
+
+
+/**
+   * responsive for large than 1200px screen
+   */
+
+@media (min-width: 1200px) {
+
+    /**
+     * CUSTOM PROPERTY
+
+
+
+     */
+
+    #player {
+
+        padding-bottom: 100%;
+    }
+
+    :root {
+
+        /**
+       * typography
+       */
+
+        --fs-1: 60px;
+        --fs-4: 26px;
+
+    }
+
+
+
+    /**
+     * REUSED STYLE
+     */
+
+
+
+
+
+    #page-player {
+
+        max-width: 60%;
+    }
+
+    .container {
+        max-width: 1320px;
+        padding-inline: 15px;
+    }
+
+
+
+
+
+    /**
+     * MOVIE DETAIL
+     */
+
+    .movie-detail {
+        padding-bottom: var(--section-padding);
+    }
+
+    .movie-detail-content {
+        max-width: 620px;
+    }
+
+    .detail-title {
+        --fs-1: 60px;
+    }
+
+    .download-btn {
+        left: auto;
+        right: 15px;
+        bottom: 0;
+        transform: rotate(0.25turn) translateY(100%);
+        transform-origin: bottom right;
+        padding: 40px 50px;
+    }
+
+    .download-btn ion-icon {
+        font-size: 30px;
+        transform: rotate(-0.25turn);
+    }
+
+}
